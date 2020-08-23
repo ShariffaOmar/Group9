@@ -39,4 +39,4 @@ class Payment(models.Model):
     date_of_payment = models.DateTimeField()
 
     def __str__(self):
-        return self.customer.get_full_name()
+        return self.customer

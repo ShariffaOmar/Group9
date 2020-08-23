@@ -11,7 +11,7 @@ class Customer(models.Model):
     email = models.EmailField()
 
     def __str__(self):
-        return self.user.get_full_name()
+        return self.user
 
 class ShippingAddress(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
