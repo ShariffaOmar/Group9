@@ -25,7 +25,6 @@ class Delivery(models.Model):
     order = models.ForeignKey(Order,on_delete=models.CASCADE)
     dispatch_time = models.DateTimeField()
     shipping_provider = models.ForeignKey(ShippingProvider,on_delete=models.CASCADE)
-    # cooler_box = models.ForeignKey(null,on_delete=CASCADE) using null on the ForeignKey brings an error
-
+    
     def __str__(self):
         return self.order

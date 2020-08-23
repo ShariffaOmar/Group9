@@ -38,11 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalogue',
-    'kiosk',
+    'kiosks',
     'customers',
     'shipping',
     'shopping'
-
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

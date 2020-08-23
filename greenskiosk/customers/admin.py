@@ -1,4 +1,4 @@
-rom django.contrib import admin
+from django.contrib import admin
 
 from .models import Customer, ShippingAddress
 # Register your models here.
