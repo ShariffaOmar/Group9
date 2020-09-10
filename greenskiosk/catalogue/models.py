@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from kiosks.models import Kiosk
 
+
 # Create your models here.
 class ProductSupplier(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -32,16 +33,11 @@ class Product(models.Model):
     supplier = models.ForeignKey(ProductSupplier, on_delete=models.CASCADE)
     kiosk = models.ForeignKey(Kiosk, on_delete=models.CASCADE)
     number_in_stock = models.IntegerField()
+    product_image=models.ImageField()
 
     def __str__(self):
         return self.title
 
-class productImage(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    image = models.ImageField()
-
-    def __str__(self):
-        return self.product
 
 class ProductReview(models.Model):
     product = models.ForeignKey(Product,on_delete=models.CASCADE)
